@@ -16,7 +16,9 @@ options:
                         reprocess them and silently overwrite.
 ```
 
-This is a thin layer on top of tesseract that processes a folder of images of scanned text and creates another folder of OCR'd text files, using the (https://github.com/tesseract-ocr/tesseract)[Tesseract] OCR engine.
+This is a thin layer on top of tesseract that processes a folder of images of
+scanned text and creates another folder of OCR'd text files, using the
+[https://github.com/tesseract-ocr/tesseract](Tesseract) OCR engine.
 
 It requires:
 
@@ -27,5 +29,3 @@ It requires:
 
 and probably some other things I have forgotten.
 
-
-  
