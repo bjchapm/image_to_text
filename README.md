@@ -1,7 +1,7 @@
 # image_to_text
 
 ```
-usage: convert_pdfs_txt.py [-h] [-v] [-i INFOLDER] [-o OUTFOLDER] [-s]
+usage: extract_txt.py [-h] [-v] [-i INFOLDER] [-o OUTFOLDER] [-s]
 
 options:
   -h, --help            show this help message and exit
@@ -31,8 +31,8 @@ and probably some other things I have forgotten.
 
 ## Example
 
-You can test functionality of the software with:
+You can test functionality of the script with:
 
-`./convert_imgs_txt.py -v -i test -o output`
+`./extract_txt.py -v -i test -o output`
 
 This will create `output` with text versions of the four input files located in `test`.
