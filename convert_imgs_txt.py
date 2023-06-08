@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-# Ben Chapman benchapman@fastmail.com
-# Wednesday, June 7, 2023 
-# Runs pytesseract on a folder with pdf, png, jpg, and tiff files. Multi-page
-# pdf and tiff are supported. Several packages need to be previously installed
+
+###
+# Ben Chapman
+# 2023 Runs pytesseract on a folder with pdf, png, jpg, and tiff files. Outputs
+# plaintext files in an output directory. Multi-page pdf and tiff are
+# supported. Several packages need to be previously installed
+#
+# MIT license as described in LICENSE.txt in folder.
 ###
 
 import time
@@ -19,9 +23,6 @@ timings = []
 image_extensions = ('pdf', 'png', 'jpg', 'jpeg', 'tif', 'tiff')
 
 def process_files(image_files, outfolder, skip=False, verbose=False):
-    # Note need to add output folder later to use temp file for processing
-    # https://pdf2image.readthedocs.io/en/latest/reference.html
-
     for image_file in image_files:
         start_time = time.time()
         ocr_doc = ''
@@ -30,7 +31,7 @@ def process_files(image_files, outfolder, skip=False, verbose=False):
         out_file = out_file + '.txt'
         out_file = os.path.join(outfolder, out_file)
         if os.path.exists(out_file) and skip:
-            print(f"Skipping {out_file}.")
+            if verbose: print(f"Skipping {out_file}.")
             continue
         if image_file.lower().endswith('pdf'):
             images = convert_from_path(image_file, dpi=500)
